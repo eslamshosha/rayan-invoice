@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <title>النورس</title>
+  </head>
+  <style>
+    @font-face {
+      font-family: "Cairo";
+      src: url("../webfonts/cairo/Cairo-ExtraLight.woff2") format("woff2"),
+        url("../webfonts/cairo/Cairo-ExtraLight.woff") format("woff"),
+        url("../webfonts/cairo/Cairo-ExtraLight.ttf") format("truetype");
+      font-weight: 200;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Cairo";
+      src: url("../webfonts/cairo/Cairo-Light.woff2") format("woff2"),
+        url("../webfonts/cairo/Cairo-Light.woff") format("woff"),
+        url("../webfonts/cairo/Cairo-Light.ttf") format("truetype");
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Cairo";
+      src: url("../webfonts/cairo/Cairo-Regular.woff2") format("woff2"),
+        url("../webfonts/cairo/Cairo-Regular.woff") format("woff"),
+        url("../webfonts/cairo/Cairo-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Cairo";
+      src: url("../webfonts/cairo/Cairo-SemiBold.woff2") format("woff2"),
+        url("../webfonts/cairo/Cairo-SemiBold.woff") format("woff"),
+        url("../webfonts/cairo/Cairo-SemiBold.ttf") format("truetype");
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Cairo";
+      src: url("../webfonts/cairo/Cairo-Bold.woff2") format("woff2"),
+        url("../webfonts/cairo/Cairo-Bold.woff") format("woff"),
+        url("../webfonts/cairo/Cairo-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Cairo";
+      src: url("../webfonts/cairo/Cairo-Black.woff2") format("woff2"),
+        url("../webfonts/cairo/Cairo-Black.woff") format("woff"),
+        url("../webfonts/cairo/Cairo-Black.ttf") format("truetype");
+      font-weight: 900;
+      font-style: normal;
+    }
+    body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #292b82;
+    }
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .header-invoice {
+      padding: 30px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      width: 120px;
+      margin: 0;
+    }
+    .logo img {
+      width: 120px;
+    }
+    .header-info {
+      color: #292b82;
+      text-align: center;
+    }
+    .header-info h2 {
+      font-weight: 700;
+      font-size: 34px;
+      line-height: 34px;
+      margin: 0 0 5px;
+      text-transform: uppercase;
+    }
+    .header-info span {
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 15px;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+    .header-info div {
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 15px;
+    }
+    .table-info-cont {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 100px;
+    }
+    .invoice-info h3 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 24px;
+      margin: 0;
+      text-decoration: underline;
+    }
+    .invoice-signature h3 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 24px;
+      margin: 0;
+    }
+    .invoice-info .invoice-code {
+      font-weight: 500;
+      font-size: 20px;
+    }
+    .invoice-data {
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .signature {
+      margin-top: 34px;
+    }
+    .signature h5 {
+      font-weight: 700;
+      font-size: 14px;
+      margin: 0;
+      padding-inline-start: 15px;
+    }
+    .signature span {
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .invoice-subject {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .invoice-subject h3 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 24px;
+      margin: 0;
+      text-decoration: underline;
+    }
+    .invoice-subject p {
+      font-weight: 700;
+      font-size: 14px;
+      text-align: center;
+      margin: 5px 0;
+    }
+    .subject-price {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      text-align: center;
+    }
+    .price-cont {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .price {
+      display: flex;
+      flex-direction: column;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .notes {
+      padding: 0 100px;
+      margin-top: 20px;
+    }
+    .notes h3 {
+      font-weight: 700;
+      font-size: 18px;
+      margin: 0;
+    }
+    .notes ul {
+      margin: 0;
+      padding: 0;
+    }
+    .notes li {
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .notes p {
+      text-align: center;
+      margin: 10px 0;
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .footer-signature {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 120px;
+    }
+    .footer-signature h5 {
+      margin: 0;
+      text-align: start;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 16px;
+      margin-bottom: 5px;
+    }
+    .table_group {
+      padding: 0 60px;
+      overflow: hidden;
+    }
+
+    @media print {
+      .table_group {
+        padding: 0 30px;
+        overflow: hidden;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="header-invoice">
+        <div class="header-info">
+          <h2>شركة النورس</h2>
+          <span>للأكياس البلاستيكية</span>
+          <div>تلفون : 24758888 - فاكس : 24758800</div>
+          <span>الكويت</span>
+        </div>
+        <figure class="logo">
+          <img src="logo.png" alt="logo" />
+        </figure>
+        <div class="header-info">
+          <h2>ALNAWRAS</h2>
+          <span>.PLASTIC BAG CO</span>
+          <div>teL : 24758888 - FAX : 24758800</div>
+          <span>KUWAIT</span>
+        </div>
+      </div>
+      <div class="table-info-cont">
+        <div class="invoice-info">
+          <h3>التاريخ: <span>22/2/2024</span></h3>
+          <span class="invoice-code">WR002</span>
+          <div class="invoice-data">
+            <div>
+              <span>السادة /</span>
+              <span>بنك وربة</span>
+            </div>
+            <div>
+              <span>اسم العميل /</span>
+              <span>محمد صلاح</span>
+            </div>
+            <div>
+              <span>رقم مدني /</span>
+              <span></span>
+            </div>
+            <div>
+              <span>هاتف /</span>
+              <span>103340</span>
+            </div>
+          </div>
+        </div>
+        <div class="invoice-signature">
+          <h3>رقم عرض سعر :</h3>
+          <div class="signature">
+            <h5>المحترمين</h5>
+            <span>المحترم</span>
+          </div>
+        </div>
+      </div>
+      <div class="invoice-subject">
+        <h3>الموضوع/ <span> عرض سعر بضاعة</span></h3>
+        <p>
+          بلاشارة الى الموضوع أعلاه, نقدم لسيادتكم بعرض سعر وذلك على النحو
+          التالي :-
+        </p>
+        <div class="subject-price">
+          <div class="price-box">
+            <div class="price-cont">
+              <div class="price">
+                <span>السعر الاجمالى</span>
+                <span>15076</span>
+              </div>
+              <div class="price">
+                <span>الكمية بالكيلو</span>
+                <span>47113</span>
+              </div>
+            </div>
+            <span class="price">15076</span>
+          </div>
+          <div class="price">
+            <span>الصنف</span>
+            <span>مواد بلاستيكية معاد تدويرها صديقة للبيئة</span>
+            <span>الاجمالى</span>
+          </div>
+        </div>
+      </div>
+      <div class="notes">
+        <h3>ملاحظة:</h3>
+        <ul>
+          <li>صلاحية عرض السعر لفترة 15 يوم من تاريخه.</li>
+          <li>
+            تم اختيار البضاعة (جاهزة) تم معاينتها معاينة تامة نافية للجهالة من
+            كل عيب ومن كل تلف واخلي بنك وربة من أي مسئولية حالية أو مستقبلية
+            نصادق على صحة البيانات الواردة في عرض السعر ونلتزم بتسليمها حسب
+            المواصفات المرفقة.
+          </li>
+        </ul>
+        <p>وتفضلوا بقبول فائق الاحترام والتقدير</p>
+      </div>
+      <div class="footer-signature">
+        <div class="signature-box">
+          <h5>توقيع العميل</h5>
+          <h5>التجاري</h5>
+        </div>
+        <div class="signature-box">
+          <h5>مدير القسم</h5>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
